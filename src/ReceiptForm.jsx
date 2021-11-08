@@ -4,6 +4,7 @@ import React,{useEffect,useState} from 'react';
 import { useForm } from './useForm';
 import { Form, Button } from 'react-bootstrap';
 import { generatePdf } from './generatePdf';
+import moment from 'moment';
 
 export const ReceiptForm = () => {
 
@@ -14,14 +15,16 @@ export const ReceiptForm = () => {
     concept: '',
     cost: '200',
     charge: '0',
-    date: '',
+    date: moment().format('YYYY-MM-DD'),
   });
 
-  const { name, concept, cost, charge } = formValues;
-
-  const handleSubmit = (e) => {
+  
+  const { name, concept, cost, charge,date } = formValues;
+  
+    const handleSubmit = (e) => {
     e.preventDefault()
-    generatePdf(name,concept,cost,charge)
+    console.log(formValues)
+    generatePdf(name,concept,cost,charge,date)
   }
 
   useEffect(()=>{
@@ -38,6 +41,16 @@ export const ReceiptForm = () => {
           name="name"
           placeholder="Enter the student's name"
           value={name}
+          onChange={handleInputChange}
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Date</Form.Label>
+        <Form.Control
+          type="date"
+          name="date"
+          defaultValue={date}
           onChange={handleInputChange}
         />
       </Form.Group>
