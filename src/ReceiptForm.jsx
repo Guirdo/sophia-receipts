@@ -23,7 +23,6 @@ export const ReceiptForm = () => {
   
     const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formValues)
     generatePdf(name,concept,cost,charge,date)
   }
 

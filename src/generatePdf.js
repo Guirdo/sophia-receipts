@@ -13,22 +13,22 @@ export const generatePdf = (name,concept,cost,charge,date) => {
   doc.setFontSize(16)
   doc.setFont('Times New Roman','bold')
   doc.text(20,50,'RECIBO DE PAGO')
-  doc.text(20,60,'___________________________________________________')
+  doc.text(20,70,'___________________________________________________')
 
 
   doc.setFont('Times New Roman','normal')
-  doc.text(20,80,date)
-  doc.text(20,90,'Alumno: '+name)
-  doc.text(20,100,'Concepto: '+concept)
+  doc.text(20,90,date)
+  doc.text(20,110,'Alumno: '+name)
+  doc.text(20,130,'Concepto: '+concept)
 
-  doc.text(20,120,'___________________________________________________')
+  doc.text(20,150,'___________________________________________________')
 
-  doc.text(20,140,'Monto: $'+cost)
-  doc.text(20,150,'Recargo: $'+charge)
-  doc.text(20,170,'___________________________________________________')
+  doc.text(20,170,'Monto: $'+cost)
+  doc.text(20,190,'Recargo: $'+charge)
+  doc.text(20,210,'___________________________________________________')
 
     doc.setFontSize(25)
-  doc.text(20,190,'TOTAL: $'+(Number(cost)+Number(charge)))
+  doc.text(20,245,'TOTAL: $'+(Number(cost)+Number(charge)))
   
   doc.save('recibo.pdf')
 };
