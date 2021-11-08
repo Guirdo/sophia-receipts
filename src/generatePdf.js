@@ -30,5 +30,5 @@ export const generatePdf = (name,concept,cost,charge,date) => {
     doc.setFontSize(25)
   doc.text(20,245,'TOTAL: $'+(Number(cost)+Number(charge)))
   
-  doc.save('recibo.pdf')
+  doc.save(`recibo_${name.replace(' ','_')}_${date}.pdf`)
 };
