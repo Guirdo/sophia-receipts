@@ -11,7 +11,7 @@ export const ReceiptForm = () => {
   const [total, setTotal] = useState(0)
   const [concepts, setConcepts] = useState([])
 
-  const [formValues, handleInputChange] = useForm({
+  const [formValues, handleInputChange,reset] = useForm({
     name: '',
     concept: '',
     cost: '0',
@@ -22,11 +22,42 @@ export const ReceiptForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    generatePdf(name,date,concepts,total)
+
+    if (isFormValid()) {
+      generatePdf(name, date, concepts, total)
+      reset()
+
+      setConcepts([])
+    } else {
+      alert('Please, complete the form')
+    }
+  }
+
+  const isFormValid = () => {
+    if (name.length === 0) {
+      return false
+    } else if (concepts.length === 0) {
+      return false
+    }
+
+    return true
   }
 
   const handleAdd = () => {
-    setConcepts([...concepts,{concept,cost}])
+    if (isConceptValid()) {
+      setConcepts([...concepts, { concept, cost }])
+    }else {
+      alert("You can't enter an empty concept")
+    }
+
+  }
+
+  const isConceptValid = () => {
+    if (concept.length === 0) {
+      return false
+    }
+
+    return true
   }
 
   const handleRemove = (co) => {
@@ -36,7 +67,7 @@ export const ReceiptForm = () => {
   useEffect(() => {
     var t = 0
 
-    for(var i = 0; i< concepts.length; i++){
+    for (var i = 0; i < concepts.length; i++) {
       t = t + Number(concepts[i].cost)
     }
 
@@ -108,9 +139,9 @@ export const ReceiptForm = () => {
         </Col>
       </Row>
 
-      <Table 
-        bordered 
-        hover 
+      <Table
+        bordered
+        hover
         size="sm"
         className="mt-3"
       >
@@ -130,7 +161,7 @@ export const ReceiptForm = () => {
                 <td>
                   <Button
                     variant="danger"
-                    onClick={()=> handleRemove(c.concept)}
+                    onClick={() => handleRemove(c.concept)}
                   >
                     x
                   </Button>
@@ -143,19 +174,17 @@ export const ReceiptForm = () => {
 
       <hr />
 
-      <Form.Group className="mt-3">
-        <Form.Label>Total</Form.Label>
-        <Form.Control
-          type="number"
-          autoComplete="off"
-          value={total}
-          disabled={true}
-        />
-      </Form.Group>
+      <Row>
+        <Col>
+          <h3 className="text-center">Total: ${total}</h3>
+        </Col>
 
-      <div className="d-grid gap-2 mt-3">
-        <Button type="submit" variant="success">Confirm</Button>
-      </div>
+        <Col sm={3} className="d-grid gap-2">
+          <Button type="submit" variant="success">Confirm</Button>
+        </Col>
+      </Row>
+
+
     </Form>
   );
 };
