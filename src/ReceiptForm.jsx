@@ -129,7 +129,7 @@ export const ReceiptForm = () => {
           </Form.Group>
         </Col>
 
-        <Col sm={2} className="d-grid gap-2 mt-3">
+        <Col sm={2} className="d-grid gap-2 m-0">
           <Button
             variant="info"
             onClick={handleAdd}

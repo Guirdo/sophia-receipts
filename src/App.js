@@ -12,7 +12,7 @@ export default function App() {
       <h1 className="text-center text-dark mb-3">Sophia's receipts</h1>
 
       <Col
-        sm={7}
+        sm={6}
         className="border border-3 border-dark bg-white"
       >
         <ReceiptForm />
