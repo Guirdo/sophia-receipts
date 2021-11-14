@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,UACI,wBACJ,CAEA,cACI,wBACJ","file":"main.a282efd9.chunk.css","sourcesContent":["html,body {\n    background-color: #31ADC2;\n}\n\n.form-receipt {\n    background-color: #D2D9D1;\n}"]}

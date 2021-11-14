@@ -1,29 +1,32 @@
 {
   "files": {
-    "main.js": "/sophia-receipts/static/js/main.f5d41ccc.chunk.js",
-    "main.js.map": "/sophia-receipts/static/js/main.f5d41ccc.chunk.js.map",
-    "runtime-main.js": "/sophia-receipts/static/js/runtime-main.c684229e.js",
-    "runtime-main.js.map": "/sophia-receipts/static/js/runtime-main.c684229e.js.map",
-    "static/js/2.d486cbd9.chunk.js": "/sophia-receipts/static/js/2.d486cbd9.chunk.js",
-    "static/js/2.d486cbd9.chunk.js.map": "/sophia-receipts/static/js/2.d486cbd9.chunk.js.map",
+    "main.css": "/sophia-receipts/static/css/main.a282efd9.chunk.css",
+    "main.js": "/sophia-receipts/static/js/main.e70dfa17.chunk.js",
+    "main.js.map": "/sophia-receipts/static/js/main.e70dfa17.chunk.js.map",
+    "runtime-main.js": "/sophia-receipts/static/js/runtime-main.de2593ad.js",
+    "runtime-main.js.map": "/sophia-receipts/static/js/runtime-main.de2593ad.js.map",
+    "static/js/2.e829cf65.chunk.js": "/sophia-receipts/static/js/2.e829cf65.chunk.js",
+    "static/js/2.e829cf65.chunk.js.map": "/sophia-receipts/static/js/2.e829cf65.chunk.js.map",
     "static/css/3.383c0125.chunk.css": "/sophia-receipts/static/css/3.383c0125.chunk.css",
-    "static/js/3.f66b0591.chunk.js": "/sophia-receipts/static/js/3.f66b0591.chunk.js",
-    "static/js/3.f66b0591.chunk.js.map": "/sophia-receipts/static/js/3.f66b0591.chunk.js.map",
-    "static/js/4.4d7cc24d.chunk.js": "/sophia-receipts/static/js/4.4d7cc24d.chunk.js",
-    "static/js/4.4d7cc24d.chunk.js.map": "/sophia-receipts/static/js/4.4d7cc24d.chunk.js.map",
-    "static/js/5.00aae9f5.chunk.js": "/sophia-receipts/static/js/5.00aae9f5.chunk.js",
-    "static/js/5.00aae9f5.chunk.js.map": "/sophia-receipts/static/js/5.00aae9f5.chunk.js.map",
+    "static/js/3.a98dc212.chunk.js": "/sophia-receipts/static/js/3.a98dc212.chunk.js",
+    "static/js/3.a98dc212.chunk.js.map": "/sophia-receipts/static/js/3.a98dc212.chunk.js.map",
+    "static/js/4.14cb94b0.chunk.js": "/sophia-receipts/static/js/4.14cb94b0.chunk.js",
+    "static/js/4.14cb94b0.chunk.js.map": "/sophia-receipts/static/js/4.14cb94b0.chunk.js.map",
+    "static/js/5.21d54d04.chunk.js": "/sophia-receipts/static/js/5.21d54d04.chunk.js",
+    "static/js/5.21d54d04.chunk.js.map": "/sophia-receipts/static/js/5.21d54d04.chunk.js.map",
     "index.html": "/sophia-receipts/index.html",
     "static/css/3.383c0125.chunk.css.map": "/sophia-receipts/static/css/3.383c0125.chunk.css.map",
-    "static/js/2.d486cbd9.chunk.js.LICENSE.txt": "/sophia-receipts/static/js/2.d486cbd9.chunk.js.LICENSE.txt",
-    "static/js/3.f66b0591.chunk.js.LICENSE.txt": "/sophia-receipts/static/js/3.f66b0591.chunk.js.LICENSE.txt",
-    "static/js/4.4d7cc24d.chunk.js.LICENSE.txt": "/sophia-receipts/static/js/4.4d7cc24d.chunk.js.LICENSE.txt",
-    "static/js/5.00aae9f5.chunk.js.LICENSE.txt": "/sophia-receipts/static/js/5.00aae9f5.chunk.js.LICENSE.txt"
+    "static/css/main.a282efd9.chunk.css.map": "/sophia-receipts/static/css/main.a282efd9.chunk.css.map",
+    "static/js/2.e829cf65.chunk.js.LICENSE.txt": "/sophia-receipts/static/js/2.e829cf65.chunk.js.LICENSE.txt",
+    "static/js/3.a98dc212.chunk.js.LICENSE.txt": "/sophia-receipts/static/js/3.a98dc212.chunk.js.LICENSE.txt",
+    "static/js/4.14cb94b0.chunk.js.LICENSE.txt": "/sophia-receipts/static/js/4.14cb94b0.chunk.js.LICENSE.txt",
+    "static/js/5.21d54d04.chunk.js.LICENSE.txt": "/sophia-receipts/static/js/5.21d54d04.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c684229e.js",
+    "static/js/runtime-main.de2593ad.js",
     "static/css/3.383c0125.chunk.css",
-    "static/js/3.f66b0591.chunk.js",
-    "static/js/main.f5d41ccc.chunk.js"
+    "static/js/3.a98dc212.chunk.js",
+    "static/css/main.a282efd9.chunk.css",
+    "static/js/main.e70dfa17.chunk.js"
   ]
 }
