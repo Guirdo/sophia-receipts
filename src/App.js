@@ -11,7 +11,7 @@ export default function App() {
       <h1 className="text-center mb-3">Recibos Sophia</h1>
 
       <Col
-        sm={6}
+        sm={7}
         className="border border-3 border-dark "
       >
         <ReceiptForm />
