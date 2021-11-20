@@ -2,7 +2,7 @@ import { jsPDF } from "jspdf";
 import moment from "moment";
 import { logo } from "./images";
 
-export const generatePdf = (name,date,concepts,total) => {
+export const generatePdf = (name,course,date,concepts,total) => {
   var doc = new jsPDF();
 
   date = moment(date).format('D-MMM-YYYY')
@@ -24,13 +24,14 @@ export const generatePdf = (name,date,concepts,total) => {
   doc.setFont('times','normal')
   doc.text(20,100,`Fecha: ${date}`)
   doc.text(20,110,`Alumno: ${name}`)
-  doc.text(20,130,'___________________________________________________')
+  doc.text(20,120,`Curso: ${course}`)
+  doc.text(20,140,'___________________________________________________')
 
   doc.setFont('times','bold')
-  doc.text(20,145,'Concepto de pago')
+  doc.text(20,155,'Concepto de pago')
   doc.setFont('times','normal')
 
-  var y = 160
+  var y = 170
   for(var i = 0; i< concepts.length;i++){
     const { concept,cost } = concepts[i]
     doc.text(20,y,concept)

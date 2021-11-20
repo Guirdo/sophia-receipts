@@ -13,18 +13,19 @@ export const ReceiptForm = () => {
 
   const [formValues, handleInputChange,reset] = useForm({
     name: '',
+    course: '',
     concept: '',
     cost: '0',
     date: moment().format('YYYY-MM-DD'),
   });
 
-  const { name, concept, cost, date } = formValues;
+  const { name,course, concept, cost, date } = formValues;
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
     if (isFormValid()) {
-      generatePdf(name, date, concepts, total)
+      generatePdf(name,course, date, concepts, total)
       reset()
 
       setConcepts([])
@@ -37,6 +38,8 @@ export const ReceiptForm = () => {
     if (name.length === 0) {
       return false
     } else if (concepts.length === 0) {
+      return false
+    }else if (course.length === 0) {
       return false
     }
 
@@ -84,6 +87,17 @@ export const ReceiptForm = () => {
           name="name"
           placeholder="Enter the student's name"
           value={name}
+          onChange={handleInputChange}
+        />
+      </Form.Group>
+
+      <Form.Group className="mt-3">
+        <Form.Label>Course</Form.Label>
+        <Form.Control
+          type="text"
+          name="course"
+          placeholder="Enter the student's course"
+          value={course}
           onChange={handleInputChange}
         />
       </Form.Group>
